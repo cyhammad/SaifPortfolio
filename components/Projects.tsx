@@ -37,9 +37,10 @@ export default function Projects({projects}: Props) {
                             y: 0,
                         }}
                         viewport= {{once: true}}
+                        className='w-72 h-56 rounded-lg md:w-[500px] md:h-96 xl:w-[700px] xl:h-[500px]'
                         src= {urlFor(project?.image).url()} alt="" />
                         <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                            <h4 className='text-4xl font-semibold text-center'><span className='underline decoration-[#F7AB0A]/50'>Case Study {i+1} of {projects.length}:</span> {project?.title}</h4>
+                            <h4 className='text-4xl font-semibold text-center'>{project?.title}</h4>
                             <div className='flex items-center space-x-2 justify-center'>
                             {project?.technologies.map((tech) => (
                                 <img
@@ -50,7 +51,7 @@ export default function Projects({projects}: Props) {
                                 />
                             ))}
                             </div>
-                            <p className='text-lg text-center md:text-left'>{project?.summary}</p>
+                            <p className='text-lg w-[400px] md:w-[700px] xl:w-[900px] text-center md:text-left'>{project?.summary}</p>
                         </div>
                     </div>
                 ))
