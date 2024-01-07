@@ -1,4 +1,5 @@
 import React from "react";
+import { MailOutlined } from '@ant-design/icons';
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -54,11 +55,9 @@ export default function Header({ socials }: Props) {
           }}
           className="flex flex-row item-center text-gray-300 cursor-pointer"
         >
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="grey"
-            bgColor="transparent"
+          <MailOutlined
+            rev = {undefined}
+            className="cursor-pointer p-[17px]"
           />
           <p className="uppercase mt-[14px] hidden md:inline-flex text-sm text-gray-400">
             Get in Touch
